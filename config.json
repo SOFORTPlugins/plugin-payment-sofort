@@ -1,0 +1,71 @@
+[
+    {
+        "tab": "Base Settings",
+        "key": "activatePayment",
+        "label": "Activate SOFORT",
+        "type": "checkbox",
+        "default": "0"
+    }, {
+        "tab": "Base Settings",
+        "key": "configKey",
+        "label": "Configuration key",
+        "type": "text",
+        "default": ""
+    }, {
+        "tab": "Extended Settings",
+        "key": "logo",
+        "label": "Logo (size)",
+        "type": "dropdown",
+        "possibleValues": {
+            "320x120": "320x120 px",
+            "250x94": "250x94 px",
+            "200x75": "200x75 px",
+            "100x38": "100x38 px",
+            "75x28": "75x28 px",
+            "42x11": "42x11 px",
+            "28x7": "28x7 px",
+            "64x44": "64x44 px",
+            "64x42": "64x42 px",
+            "48x34": "48x34 px",
+            "48x32": "48x32 px",
+            "32x24": "32x24 px",
+            "32x22": "32x22 px"
+        },
+        "default": "100x38"
+    }, {
+        "tab": "Extended Settings",
+        "key": "recommendedPayment",
+        "label": "Recommended payment method",
+        "type": "checkbox",
+        "default": "1"
+    }, {
+        "tab": "Extended Settings",
+        "key": "reason1",
+        "label": "Reason 1",
+        "type": "text",
+        "default": "{{transaction_id}}"
+    }, {
+        "tab": "Extended Settings",
+        "key": "reason2",
+        "label": "Reason 2",
+        "type": "text",
+        "default": "SOFORT Online Shop"
+    }, {
+        "tab": "Merchant",
+        "key": "recipientHolder",
+        "label": "Recipient holder",
+        "type": "text",
+        "default": ""
+    }, {
+        "tab": "Merchant",
+        "key": "recipientIBAN",
+        "label": "IBAN",
+        "type": "text",
+        "default": ""
+    }, {
+        "tab": "Merchant",
+        "key": "recipientBIC",
+        "label": "BIC",
+        "type": "text",
+        "default": ""
+    }]

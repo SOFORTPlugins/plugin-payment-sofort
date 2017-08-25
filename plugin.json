@@ -1,0 +1,29 @@
+{
+    "name": "SOFORT",
+    "marketplaceName": { "de": "SOFORT Überweisung", "en": "SOFORT" },
+    "namespace": "Sofort",
+    "type": "payment",
+    "version": "1.0.0",
+    "license": "LGPL-3.0",
+    "pluginIcon": "icon_plugin_xs.png",
+    "price": 0.00,
+    "description": "SOFORT: Direct payment via online banking. When shopping online, select SOFORT as the payment method. This automatically redirects you to the securely encrypted payment wizard of SOFORT. Select your country and bank and log in using your online banking login details. At the end, confirm the credit transfer by entering a confirmation code.",
+    "shortDescription": { "de": "Das offizielle SOFORT-Plugin für plentymarkets", "en": "The official SOFORT plugin for plentymarkets" },
+    "categories": ["3519"],
+    "author": "Frontend Studios GmbH",
+    "authorIcon": "icon_author_xs.png",
+    "email": "payment@frontend-studios.de",
+    "phone": "+49 561 98 681 100",
+    "keywords": ["sofort", "payment"],
+    "require": [],
+    "serviceProvider": "Sofort\\Providers\\SofortServiceProvider",
+    "runOnBuild": [
+        "Sofort\\Migrations\\CreatePaymentMethod"
+    ],
+    "dependencies": {
+        "sofort/sofortlib-php": "3.*"
+    },
+    "dataProviders": [
+        { "key": "Sofort\\Providers\\DataProvider\\SofortLogoDataProvider", "name": "SOFORT Logo", "description": "Display SOFORT logo in the payment method container." }
+    ]
+}
