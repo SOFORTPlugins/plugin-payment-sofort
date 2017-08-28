@@ -12,9 +12,7 @@ Bevor Sie die Zahlungsart in plentymarkets einrichten können, ist die [Eröffnu
 
 ## Plugin-Installation
 
-Bevor das Modul verwendet werden kann, muss dieses in plentymarkets installiert werden.**Installation des SOFORT-Plugins via GIT:**
-
-1. Menü **Plugins » Git** öffnen2. **New Plugin** auswählen. Es öffnet sich das Fenster **Settings**.3. Verbinden Sie Ihren GitHub-Zugang und tragen Sie **User Name** und **Password** ein4.	Tragen Sie die Remote-URL des SOFORT-Plugins ein5.	Aktivieren Sie **Auto fetch**6.	Abschließend speichern mit **Save**
+Bevor das Modul verwendet werden kann, muss dieses in plentymarkets installiert werden.
 
 **Installation des SOFORT-Plugins via plentyMarketplace:**
 
@@ -24,6 +22,15 @@ Bevor das Modul verwendet werden kann, muss dieses in plentymarkets installiert 
 4. Backend vom Shop aufrufen
 5. Menü Plugins **» Purchases** öffnen
 6. Schaltfläche **Install** für das SOFORT-Plugin betätigen
+
+**Installation des SOFORT-Plugins via GIT:**
+
+1. Menü **Plugins » Git** öffnen
+2. **New Plugin** auswählen. Es öffnet sich das Fenster **Settings**.
+3. Verbinden Sie Ihren GitHub-Zugang und tragen Sie **User Name** und **Password** ein
+4.	Tragen Sie die Remote-URL des SOFORT-Plugins ein: <https://github.com/frontend-studios/plugin-payment-sofort.git>
+5.	Aktivieren Sie **Auto fetch**
+6.	Abschließend speichern mit **Save**
 
 ## SOFORT in plentymarkets einrichten
 

@@ -12,9 +12,7 @@ You need to register at our [Merchant Portal](https://www.sofort.com/payment/use
 
 ## Installing SOFORT in plentymarkets
 
-Before using SOFORT-Plugins, you need to install the module from the Git or plentyMarketplace.**Installing SOFORT-Plugin via GIT:**
-
-1. Open the Menu Plugins **» Git**2.	Click on **New Plugin**. The frame **Settings** will open3.	Connect to your Github Account by filling in **User Name** and **Password** 4.	Fill the Remote URL of the SOFORT-Plugin5.	Select **Auto fetch**6.	Then click on **Save**
+Before using SOFORT-Plugin, you need to install the module from the Git or plentyMarketplace.
 
 **Installing SOFORT-Plugin via plentyMarketplace:**
 
@@ -24,6 +22,15 @@ Before using SOFORT-Plugins, you need to install the module from the Git or plen
 4. Go to plentymarkets shop backend
 5. Click on the Menu Plugin **» Purchases**
 6. Press **Install**
+
+**Installing SOFORT-Plugin via GIT:**
+
+1. Open the Menu Plugins **» Git**
+2.	Click on **New Plugin**. The frame **Settings** will open
+3.	Connect to your Github Account by filling in **User Name** and **Password** 
+4.	Fill the Remote URL of the SOFORT-Plugin: <https://github.com/frontend-studios/plugin-payment-sofort.git>
+5.	Select **Auto fetch**
+6.	Then click on **Save**
 
 ## Configuring SOFORT in plentymarkets
 
