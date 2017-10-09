@@ -66,8 +66,8 @@ class SofortServiceProvider extends ServiceProvider
 		]);
 
 		$refundNames = [
-			'de' => 'Rückerstattung der SOFORT Überweisung',
-			'en' => 'Refund of SOFORT Payment'
+			'de' => 'Rückerstattung der Sofort-Zahlung',
+			'en' => 'Refund of Sofort Payment'
 		];
 		$eventProceduresService->registerProcedure('sofort', ProcedureEntry::EVENT_TYPE_ORDER, $refundNames,'\Sofort\Procedures\RefundEventProcedure@run');
 
@@ -94,11 +94,11 @@ class SofortServiceProvider extends ServiceProvider
 					if ($creditPayment instanceof Payment) {
 						$paymentHelper->assignPlentyPaymentToPlentyOrder($creditPayment, $event->getOrderId());
 						$event->setType('success');
-						$event->setValue('The SOFORT-Payment has been executed successfully!');
+						$event->setValue('The Sofort-Payment has been executed successfully!');
 					}
 				} else {
 					$event->setType('error');
-					$event->setValue('The SOFORT-Payment could not be executed!');
+					$event->setValue('The Sofort-Payment could not be executed!');
 				}
 			}
 		});

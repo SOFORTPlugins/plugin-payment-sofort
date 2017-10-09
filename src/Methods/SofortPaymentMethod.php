@@ -9,6 +9,7 @@ use Plenty\Modules\Payment\Method\Contracts\PaymentMethodService;
 use Plenty\Plugin\ConfigRepository;
 use Plenty\Plugin\Log\Loggable;
 use Sofort\Utility\DivUtility;
+use Sofort\Constants\SofortConstants;
 
 /**
  * Class SofortPaymentMethod
@@ -50,14 +51,14 @@ class SofortPaymentMethod extends PaymentMethodService
 	 */
 	private $strings = [
 		'de' => [
-			'name' => 'SOFORT Überweisung',
-			'desc' => 'Zahlen Sie sicher und bequem mit ihren Online-Banking-Daten (PIN/TAN) ohne Registrierung.',
-			'url' => 'https://www.sofort.com/ger-DE/kaeufer/su/so-funktioniert-sofort-ueberweisung/'
+			'name' => 'Sofort.',
+			'desc' => 'Einfach und direkt bezahlen.',
+			'url' => 'https://documents.sofort.com/sue/kundeninformationen/'
 		],
 		'en' => [
-			'name' => 'SOFORT',
-			'desc' => 'Online payments made easy. With SOFORT you can pay easily and securely with your usual online banking login data. No registration required.',
-			'url' => 'https://www.sofort.com/eng-GB/buyer/sb/how-sofort-banking-works/'
+			'name' => 'Online bank transfer.',
+			'desc' => 'Simple and secure',
+			'url' => 'https://documents.sofort.com/sb/customer-information/'
 		]
 	];
 
@@ -109,15 +110,6 @@ class SofortPaymentMethod extends PaymentMethodService
 	{
 		// Name of the payment method
 		$name = $this->strings[$this->selectedLanguage]['name'];
-
-		// Switch in config.json as recommended payment method
-		if ($this->configRepo->get('SOFORT.recommendedPayment', 'false') !== 'false') {
-			if ($this->selectedLanguage === 'de') {
-				$name .= ' (empfohlene Zahlungsart)';
-			} else {
-				$name .= ' (recommended payment method)';
-			}
-		}
 
 		return $name;
 	}

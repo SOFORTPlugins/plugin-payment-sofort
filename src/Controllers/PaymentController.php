@@ -126,6 +126,7 @@ class PaymentController extends Controller
 
 	/**
 	 * @return Response
+	 * @deprecated since version 1.0.0
 	 */
 	public function sofortCheckout()
 	{

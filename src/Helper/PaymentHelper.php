@@ -12,6 +12,7 @@ use Plenty\Modules\Payment\Contracts\PaymentOrderRelationRepositoryContract;
 use Plenty\Modules\Payment\Contracts\PaymentPropertyRepositoryContract;
 use Plenty\Modules\Payment\Contracts\PaymentRepositoryContract;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodRepositoryContract;
+use Plenty\Modules\Payment\Method\Models\PaymentMethod;
 use Plenty\Modules\Payment\Models\Payment;
 use Plenty\Modules\Payment\Models\PaymentProperty;
 use Plenty\Modules\System\Models\WebstoreConfiguration;
@@ -111,13 +112,15 @@ class PaymentHelper
 	public function getSofortMopId()
 	{
 		$paymentMethods = $this->paymentMethodRepository->allForPlugin('sofort');
-		if (!is_null($paymentMethods)) {
-			foreach ($paymentMethods as $paymentMethod) {
-				if ($paymentMethod->paymentKey == 'SOFORT') {
-					return $paymentMethod->id;
-				}
+		$this->getLogger(__METHOD__)->debug('SOFORT::General.retrievedValue', ['paymentMethods' => $paymentMethods]);
+
+		/* @var $paymentMethod PaymentMethod */
+		foreach ($paymentMethods as $index => $paymentMethod) {
+			if ($paymentMethod->paymentKey === 'SOFORT') {
+				return $paymentMethod->id;
 			}
 		}
+
 		return 'no_paymentmethod_found';
 	}
 
@@ -197,9 +200,8 @@ class PaymentHelper
 		try {
 			/* @var $payment Payment */
 			$payment = $this->paymentRepository->createPayment($preparePayment);
-			$this->getLogger(__METHOD__)->debug('SOFORT::General.payment', $payment->toArray());
 		} catch (\Exception $exc) {
-			echo $exc->getTraceAsString();
+			$this->getLogger(__METHOD__)->error('SOFORT::General.createPayment', ['trace' => $exc->getTraceAsString()]);
 		}
 
 		return $payment;
@@ -230,27 +232,35 @@ class PaymentHelper
 	public function updatePayment($status, $transactionId)
 	{
 		$payments = $this->paymentRepository->getPaymentsByPropertyTypeAndValue(PaymentProperty::TYPE_TRANSACTION_ID, $transactionId);
-
 		$state = $this->mapStatus((string) $status);
 
-		if (!empty($payments)) {
-			/* @var $payment Payment */
-			foreach ($payments as $payment) {
-				if ($payment->mopId === $this->getSofortMopId()) {
-					if ($payment->status != $state) {
-						$payment->status = $state;
-						if ($state == Payment::STATUS_APPROVED || $state == Payment::STATUS_CAPTURED) {
-							$payment->unaccountable = 0;
-						}
-						$this->paymentRepository->updatePayment($payment);
+		/* @var $payment Payment */
+		foreach ($payments as $payment) {
+			$this->getLogger(__METHOD__)->info('SOFORT::General.payments', ['payment' => $payment]);
+			if ($payment->mopId == $this->getSofortMopId()) {
+				if ($payment->status != $state) {
+					$this->getLogger(__METHOD__)->debug('SOFORT::General.updatePayment', ['status' => $state]);
+					$payment->status = $state;
+					if ($state == Payment::STATUS_APPROVED || $state == Payment::STATUS_CAPTURED) {
+						$payment->unaccountable = 0;
 					}
-					$properties = $payment->properties;
-					if (!empty($properties)) {
-						/* @var $property PaymentProperty */
-						foreach ($properties as $property) {
-							if ($property->typeId === PaymentProperty::TYPE_EXTERNAL_TRANSACTION_STATUS) {
-								$property->value = (string) $status;
+					try {
+						$this->paymentRepository->updatePayment($payment);
+					} catch (\Exception $exc) {
+						$this->getLogger(__METHOD__)->error('SOFORT::General.updatePayment', ['payment' => $payment, 'trace' => $exc->getTraceAsString()]);
+					}
+				}
+				$properties = $payment->properties;
+				if (!empty($properties)) {
+					/* @var $property PaymentProperty */
+					foreach ($properties as $property) {
+						if ($property->typeId == PaymentProperty::TYPE_EXTERNAL_TRANSACTION_STATUS) {
+							$this->getLogger(__METHOD__)->debug('SOFORT::General.changePaymentProperty', ['value' => $status]);
+							$property->value = (string) $status;
+							try {
 								$this->paymentPropertyRepository->changeProperty($property);
+							} catch (\Exception $exc) {
+								$this->getLogger(__METHOD__)->error('SOFORT::General.changePaymentProperty', ['property' => $property, 'trace' => $exc->getTraceAsString()]);
 							}
 						}
 					}
@@ -341,7 +351,7 @@ class PaymentHelper
 			/* @var $property PaymentProperty */
 			foreach ($properties as $property) {
 				if ($property instanceof PaymentProperty) {
-					if ($property->typeId === $propertyType) {
+					if ($property->typeId == $propertyType) {
 						return $property->value;
 					}
 				}

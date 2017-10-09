@@ -319,7 +319,6 @@ class PaymentService
 		$sofortRequestParams['country'] = $countryRepo->findIsoCode($shippingAddress->countryId, 'iso_code_2');
 
 		$sofortRequestParams['urls'] = $this->paymentHelper->getRestReturnUrls();
-
 		$this->getLogger(__METHOD__)->debug('SOFORT::General.retrievedValue', ['sofortRequestParams' => $sofortRequestParams]);
 
 		return $sofortRequestParams;

@@ -1,12 +1,12 @@
 ![FRONTEND Studios Logo](https://www.frontend-studios.de/img/logos/fes_big.png)
 
-# SOFORT plugin for plentymarkets 7.x
+# Sofort plugin for plentymarkets 7.x
 
-This is the official SOFORT plugin developed by Frontend Studios. Integrate the payment method SOFORT in your plentymarkets 7 online store.
+This is the official Sofort plugin developed by Frontend Studios. Integrate the payment method Sofort in your plentymarkets 7 online store.
 
 ## Requirements
 
-This is a plugin for [plentymarkets 7](https://www.plentymarkets.com). A layout plugin is required in order to integrate SOFORT in your online store. We recommend using the plentymarkets plugin [Ceres](https://github.com/plentymarkets/plugin-ceres).
+This is a plugin for [plentymarkets 7](https://www.plentymarkets.com). A layout plugin is required in order to integrate Sofort in your online store. We recommend using the plentymarkets plugin [Ceres](https://github.com/plentymarkets/plugin-ceres).
 
 ## Installing
 

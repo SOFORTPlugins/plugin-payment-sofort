@@ -19,7 +19,7 @@ class SofortRouteServiceProvider extends RouteServiceProvider
 	{
 		$router->get('sofort/checkoutSuccess', 'Sofort\Controllers\PaymentController@checkoutSuccess');
 		$router->get('sofort/checkoutCancel', 'Sofort\Controllers\PaymentController@checkoutCancel');
-		$router->get('sofort/sofortCheckout', 'Sofort\Controllers\PaymentController@sofortCheckout');
+		//$router->get('sofort/sofortCheckout', 'Sofort\Controllers\PaymentController@sofortCheckout');
 		$router->post('sofort/notification', 'Sofort\Controllers\PaymentController@notification');
 	}
 }

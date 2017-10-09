@@ -1,14 +1,14 @@
 {
     "name": "SOFORT",
-    "marketplaceName": { "de": "SOFORT Überweisung", "en": "SOFORT" },
+    "marketplaceName": { "de": "Sofort.", "en": "Online bank transfer." },
     "namespace": "Sofort",
     "type": "payment",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "LGPL-3.0",
     "pluginIcon": "icon_plugin_xs.png",
     "price": 0.00,
-    "description": "SOFORT: Direct payment via online banking. When shopping online, select SOFORT as the payment method. This automatically redirects you to the securely encrypted payment wizard of SOFORT. Select your country and bank and log in using your online banking login details. At the end, confirm the credit transfer by entering a confirmation code.",
-    "shortDescription": { "de": "Das offizielle SOFORT-Plugin für plentymarkets", "en": "The official SOFORT plugin for plentymarkets" },
+    "description": "Sofort: Direct payment via online banking. When shopping online, select Sofort as the payment method. This automatically redirects you to the securely encrypted payment wizard of Sofort. Select your country and bank and log in using your online banking login details. At the end, confirm the credit transfer by entering a confirmation code.",
+    "shortDescription": { "de": "Das offizielle, von Frontend Studios entwickelte Sofort-Plugin für den Webshop Ceres und andere Template-Plugins.", "en": "The official Sofort plugin for plentymarkets." },
     "categories": ["3519"],
     "author": "Frontend Studios GmbH",
     "authorIcon": "icon_author_xs.png",
@@ -24,6 +24,6 @@
         "sofort/sofortlib-php": "3.*"
     },
     "dataProviders": [
-        { "key": "Sofort\\Providers\\DataProvider\\SofortLogoDataProvider", "name": "SOFORT Logo", "description": "Display SOFORT logo in the payment method container." }
+        { "key": "Sofort\\Providers\\DataProvider\\SofortLogoDataProvider", "name": "Sofort Logo", "description": "Display Sofort logo in the payment method container." }
     ]
 }

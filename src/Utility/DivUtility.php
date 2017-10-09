@@ -3,6 +3,7 @@ namespace Sofort\Utility;
 
 use Plenty\Modules\Frontend\Session\Storage\Models\LocaleSettings;
 use Plenty\Plugin\ConfigRepository;
+use Sofort\Constants\SofortConstants;
 use Sofort\Services\SessionStorageService;
 
 /**
@@ -43,9 +44,8 @@ class DivUtility
 		if (!strlen($language)) {
 			$language = $this->getLanguage();
 		}
-		$src = 'https://images.sofort.com/%LOCALE%/%SIZE%.png';
-		$src = str_replace('%LOCALE%', ($language === 'de' ? 'de/su' : 'uk/sb'), $src);
-		$src = str_replace('%SIZE%', $this->configRepo->get('SOFORT.logo'), $src);
+		$src = SofortConstants::CHECKOUT_LOGO_URI;
+		$src = str_replace('%LOCALE%', ($language === 'de' ? 'de_de' : 'en_gb'), $src);
 
 		return $src;
 	}

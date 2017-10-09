@@ -2,7 +2,7 @@
 namespace Sofort\Providers\DataProvider;
 
 use Plenty\Plugin\Templates\Twig;
-use Sofort\Utility\DivUtility;
+use Sofort\Constants\SofortConstants;
 
 /**
  * Class SofortLogoDataProvider
@@ -14,11 +14,10 @@ class SofortLogoDataProvider
 
 	/**
 	 * @param Twig $twig
-	 * @param DivUtility $divUtility
 	 * @return string
 	 */
-	public function call(Twig $twig, DivUtility $divUtility)
+	public function call(Twig $twig)
 	{
-		return $twig->render('SOFORT::Homepage.SofortLogo', ['src' => $divUtility->getLogo()]);
+		return $twig->render('SOFORT::Homepage.SofortLogo', ['src' => SofortConstants::KLARNA_LOGO_URI]);
 	}
 }

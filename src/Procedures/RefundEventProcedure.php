@@ -47,13 +47,13 @@ class RefundEventProcedure
 	{
 		/* @var $order Order */
 		$order = $eventTriggered->getOrder();
-
 		$this->getLogger(__METHOD__)->debug('SOFORT::Events.refundEventOrder', ['order' => $order]);
 
 		/* @var $orderAmount OrderAmount */
 		$orderAmount = $order->amounts[0];
 
 		switch ($order->typeId) {
+
 			case self::ORDER_TYPE_ID_SALES:
 
 				$orderId = $order->id;
@@ -63,9 +63,7 @@ class RefundEventProcedure
 			case self::ORDER_TYPE_ID_CREDIT_NOTE:
 
 				$parentOrder = $this->getParentOrder($order->orderReferences);
-
-				$this->getLogger(__METHOD__)->debug('SOFORT::General.order',
-						['parentOrder' => $parentOrder]);
+				$this->getLogger(__METHOD__)->debug('SOFORT::General.order', ['parentOrder' => $parentOrder]);
 
 				if ($parentOrder instanceof Order) {
 					if ($parentOrder->typeId === self::ORDER_TYPE_ID_SALES) {
@@ -91,14 +89,15 @@ class RefundEventProcedure
 
 		/* @var $payment Payment */
 		foreach ($payments as $payment) {
-			if ($payment->mopId === $paymentHelper->getSofortMopId()) {
+
+			if ($payment->mopId == $paymentHelper->getSofortMopId()) {
+
 				$refundProperties['transactionId'] = $paymentHelper->getPaymentPropertyValue($payment, PaymentProperty::TYPE_TRANSACTION_ID);
 				$refundProperties['holder'] = $configRepo->get('SOFORT.recipientHolder');
 				$refundProperties['iban'] = $configRepo->get('SOFORT.recipientIBAN');
 				$refundProperties['bic'] = $configRepo->get('SOFORT.recipientBIC');
 				$refundProperties['amount'] = $orderAmount->invoiceTotal;
 				$refundProperties['currency'] = $orderAmount->currency;
-
 				$this->getLogger(__METHOD__)->debug('SOFORT::Events.refundEventProperties', ['refundProperties' => $refundProperties]);
 
 				if (!empty($refundProperties)) {

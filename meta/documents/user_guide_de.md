@@ -1,45 +1,45 @@
 <div class="alert alert-warning" role="alert">
-   <strong><i>Hinweis:</strong></i> Das SOFORT-Plugin ist für die Nutzung mit dem Webshop Ceres entwickelt und funktioniert nur mit dessen Logikstruktur oder anderen Template-Plugins. 
+   <strong><i>Hinweis:</strong></i> Das Sofort-Plugin ist für die Nutzung mit dem Webshop Ceres entwickelt und funktioniert nur mit dessen Logikstruktur oder anderen Template-Plugins. 
 </div>
 
-# SOFORT Überweisung – Bargeldloses Bezahlen in plentymarkets Online-Shops
+# Sofort. – Bargeldloses Bezahlen in plentymarkets Online-Shops
 
-Mit dem plentymarkets SOFORT Plugin binden Sie **SOFORT Überweisung** in Ihren Webshop ein.
+Mit diesem Plugin binden Sie das Direkt-Überweisungsverfahren **Sofort.** in Ihren Webshop ein.
 
-## SOFORT-Konto eröffnen
+## Sofort-Konto eröffnen
 
-Bevor Sie die Zahlungsart in plentymarkets einrichten können, ist die [Eröffnung eines Geschäftskontos bei SOFORT](https://www.sofort.com/payment/users/register) erforderlich. Sie erhalten dann Informationen sowie Zugangsdaten, die Sie für die Einrichtung in plentymarkets benötigen.
+Bevor Sie die Zahlungsart in plentymarkets einrichten können, ist die [Eröffnung eines Geschäftskontos bei Sofort](https://www.sofort.com/payment/users/register) erforderlich. Sie erhalten dann Informationen sowie Zugangsdaten, die Sie für die Einrichtung in plentymarkets benötigen.
 
 ## Plugin-Installation
 
 Bevor das Modul verwendet werden kann, muss dieses in plentymarkets installiert werden.
 
-**Installation des SOFORT-Plugins via plentyMarketplace:**
+**Installation des Sofort-Plugins via plentyMarketplace:**
 
 1. [plentyMarketplace](https://marketplace.plentymarkets.com/) im Browser aufrufen
-2. Finden Sie das Plugin unter **Payment** → **SOFORT**
+2. Finden Sie das Plugin unter **Payment** → **Sofort**
 3. **Go to checkout** (Login) und den Einkauf bestätigen
 4. Backend vom Shop aufrufen
-5. Menü Plugins **» Purchases** öffnen
-6. Schaltfläche **Install** für das SOFORT-Plugin betätigen
+5. Menü **Plugins » Purchases** öffnen
+6. Schaltfläche **Install** für das Sofort-Plugin betätigen
 
-**Installation des SOFORT-Plugins via GIT:**
+**Installation des Sofort-Plugins via GIT:**
 
 1. Menü **Plugins » Git** öffnen
 2. **New Plugin** auswählen. Es öffnet sich das Fenster **Settings**.
 3. Verbinden Sie Ihren GitHub-Zugang und tragen Sie **User Name** und **Password** ein
-4.	Tragen Sie die Remote-URL des SOFORT-Plugins ein: <https://github.com/frontend-studios/plugin-payment-sofort.git>
-5.	Aktivieren Sie **Auto fetch**
-6.	Abschließend speichern mit **Save**
+4. Tragen Sie die Remote-URL des Sofort-Plugins ein: <https://github.com/frontend-studios/plugin-payment-sofort.git>
+5. Aktivieren Sie **Auto fetch**
+6. Abschließend speichern mit **Save**
 
-## SOFORT in plentymarkets einrichten
+## Sofort in plentymarkets einrichten
 
-Bevor Sie die Funktionen des SOFORT-Plugins nutzen können, müssen Sie zuerst Ihr SOFORT-Konto mit Ihrem plentymarkets System verbinden.
+Bevor Sie die Funktionen des Sofort-Plugins nutzen können, müssen Sie zuerst Ihr Sofort-Konto mit Ihrem plentymarkets System verbinden.
 
-##### SOFORT-Konto anbinden:
+##### Sofort-Konto anbinden:
   
 1. Öffnen Sie das Menü **Plugins » Übersicht**.
-2. Klicken Sie auf das Plugin **SOFORT** und wählen dann **Konfiguration**.
+2. Klicken Sie auf das Plugin **Sofort** und wählen dann **Konfiguration**.
 3. Geben Sie den Konfigurationsschlüssel ein.  
 	→ Diesen Schlüssel erhalten Sie durch den Registrierungsprozess.
 4. Nehmen Sie weitere Einstellungen nach Bedarf im Reiter **Erweiterte Einstellungen** vor.
@@ -47,7 +47,7 @@ Bevor Sie die Funktionen des SOFORT-Plugins nutzen können, müssen Sie zuerst I
 6. Speichern Sie die Einstellungen ab.
 
 <table>
-  <caption>Tab. 1: SOFORT-Plugineinstellungen / Grundeinstellungen</caption>
+  <caption>Tab. 1: Sofort-Plugineinstellungen / Grundeinstellungen</caption>
   <thead>
     <th>
       Einstellung
@@ -68,14 +68,17 @@ Bevor Sie die Funktionen des SOFORT-Plugins nutzen können, müssen Sie zuerst I
       <td>
         <b>Konfigurationsschlüssel</b>
       </td>
-      <td><strong><i>Wichtig:</i></strong> Den Konfigurationsschlüssel erhalten Sie nach der Registrierung (https://www.sofort.com/payment/users/register). <br />Ohne Eingabe wird die Zahlungsart nicht aktiviert.
+      <td><strong><i>Wichtig:</i></strong> Den Konfigurationsschlüssel erhalten Sie nach der Registrierung (https://www.sofort.com/payment/users/register).
+      <br />Ohne korrekte Eingabe wird die Zahlungsart nicht aktiviert.
+      <br />Beispiel für den Aufbau des Konfigurationsschlüssels:
+      <br />{Kundennummer}:{Projekt-ID}:{API-Key}
       </td>
     </tr>
   </tbody>
 </table>
 
 <table>
-  <caption>Tab. 2: SOFORT-Plugineinstellungen / Erweiterte Einstellungen</caption>
+  <caption>Tab. 2: Sofort-Plugineinstellungen / Erweiterte Einstellungen</caption>
   <thead>
     <th>
       Einstellung
@@ -85,24 +88,6 @@ Bevor Sie die Funktionen des SOFORT-Plugins nutzen können, müssen Sie zuerst I
     </th>
   </thead>
   <tbody>
-    <tr>
-      <td>
-        <b>Logo (Größe)</b>
-      </td>
-      <td>
-        Wählen Sie hier Ihre bevorzugte Größe des Logos aus. <strong><i><br />Wichtig: </i></strong>Die Darstellung im Frontend ist abhängig vom Template Plugin. Möglicherweise wird die geänderte Größe dabei nicht berücksichtigt.
-        <br /><b>Standard:</b> <i>100x38</i>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>Empfohlene Zahlungsart</b>
-      </td>
-      <td>
-        Bei Aktivierung wird der Anzeigename durch den Zusatz "Empfohlene Zahlungsart" ergänzt.
-        <br /><b>Standard:</b> <i>Ja</i>
-      </td>
-    </tr>
     <tr>
       <td>
         <b>Verwendungszweck (Zeile 1) *Pflichtangabe</b>
@@ -131,7 +116,7 @@ Bevor Sie die Funktionen des SOFORT-Plugins nutzen können, müssen Sie zuerst I
 </table>
 
 <table>
-  <caption>Tab. 3: SOFORT-Plugineinstellungen / Händlereinstellungen</caption>
+  <caption>Tab. 3: Sofort-Plugineinstellungen / Händlereinstellungen</caption>
   <thead>
     <th>
       Einstellung
@@ -175,19 +160,25 @@ Bevor Sie die Funktionen des SOFORT-Plugins nutzen können, müssen Sie zuerst I
 
 In diesem Abschnitt erfahren Sie, wie Sie die Zahlungsart in Ihrem Webshop anbieten.
 
-### SOFORT Überweisung aktivieren
+### Sofort. aktivieren
 
-Nachdem Sie das SOFORT-Plugin installiert haben, müssen Sie in der Konfiguration in der Grundeinstellung das Plugin aktivieren und mindestens den Konfigurationsschlüssel setzen.
-Danach ist SOFORT Überweisung ohne weitere Einstellungen als Zahlungsart verfügbar. Diese Zahlungsart erscheint in der Kaufabwicklung je nach Priorität neben den anderen aktivierten Zahlungsarten.
+Nachdem Sie das Sofort-Plugin installiert haben, müssen Sie in der Konfiguration in der Grundeinstellung das Plugin aktivieren und mindestens den Konfigurationsschlüssel setzen.
+Danach ist Sofort. ohne weitere Einstellungen als Zahlungsart verfügbar. Diese Zahlungsart erscheint in der Kaufabwicklung je nach Priorität neben den anderen aktivierten Zahlungsarten.
 
-## SOFORT-Zahlung automatisch zurückzahlen
+## Sofort-Zahlung automatisch zurückzahlen
 
-Richten Sie eine Ereignisaktion ein, um die Rückzahlung einer Zahlung über SOFORT zu automatisieren.
+Richten Sie eine Ereignisaktion ein, um die Rückzahlung einer Zahlung über Sofort. zu automatisieren.
+
+<div class="alert alert-warning" role="alert">
+   <strong><i>Wichtig:</i></strong> Automatische Rückzahlungen stehen nur Händlern mit einem Konto bei der Deutschen Handelsbank (DHB) zur Verfügung. 
+</div>
+
+Weitere Informationen zu Rückbuchungen stehen Ihnen über das [Integration Center](https://www.sofort.com/integrationCenter-eng-DE/content/view/full/3363) zur Verfügung. 
 
 ##### Ereignisaktion einrichten:
 
 1. Öffnen Sie das Menü **Plugins » Übersicht**.
-2. Klicken Sie auf das Plugin **SOFORT** und wählen dann **Konfiguration**.
+2. Klicken Sie auf das Plugin **Sofort** und wählen dann **Konfiguration**.
 3. Tragen Sie im Reiter **Händlereinstellungen** Ihre Bankverbindung ein.
 4. Öffnen Sie das Menü **Einstellungen » Aufträge » Ereignisaktionen**.
 5. Klicken Sie auf **Ereignisaktion hinzufügen**.
@@ -220,15 +211,15 @@ Richten Sie eine Ereignisaktion ein, um die Rückzahlung einer Zahlung über SOF
     <tr>
       <td><strong>Filter 1</strong></td>
       <td><strong>Auftrag > Zahlungsart</strong></td>
-      <td><strong>Plugin: SOFORT</strong></td>
+      <td><strong>Plugin: Sofort</strong></td>
     </tr>
     <tr>
       <td><strong>Aktion</strong></td>
-      <td><strong>Plugin > Rückerstattung der SOFORT Überweisung</strong></td>
+      <td><strong>Plugin > Rückerstattung der Sofort-Zahlung</strong></td>
       <td>&nbsp;</td>
     </tr>
   </tbody>
   <caption>
-    Tab. 4: Ereignisaktion zur automatischen Rückzahlung der SOFORT-Zahlung
+    Tab. 4: Ereignisaktion zur automatischen Rückzahlung der Sofort-Zahlung
   </caption>
 </table>

@@ -1,45 +1,45 @@
 <div class="alert alert-warning" role="alert">
-   <strong><i>Note:</i></strong> The SOFORT plugin has been developed for use with the online store Ceres and only works with its structure or other template plugins. 
+   <strong><i>Note:</i></strong> The Sofort plugin has been developed for use with the online store Ceres and only works with its structure or other template plugins. 
 </div>
 
-# SOFORT - Easy Online payments for plentymarkets Online-Shops
+# Sofort - Easy Online payments for plentymarkets Online-Shops
 
-With SOFORT for plentymarkets you can add **SOFORT** as a payment method to your online shop.
+With Sofort for plentymarkets you can add **Sofort** as a payment method to your online shop.
 
-## Creating a SOFORT account
+## Creating a Sofort account
 
-You need to register at our [Merchant Portal](https://www.sofort.com/payment/users/register) before you are able to use SOFORT as a payment method. After registration you will receive the correct information and credentials needed to install and configure the payment method. 
+You need to register at our [Merchant Portal](https://www.sofort.com/payment/users/register) before you are able to use Sofort as a payment method. After registration you will receive the correct information and credentials needed to install and configure the payment method. 
 
-## Installing SOFORT in plentymarkets
+## Installing Sofort in plentymarkets
 
-Before using SOFORT-Plugin, you need to install the module from the Git or plentyMarketplace.
+Before using Sofort-Plugin, you need to install the module from the Git or plentyMarketplace.
 
-**Installing SOFORT-Plugin via plentyMarketplace:**
+**Installing Sofort-Plugin via plentyMarketplace:**
 
 1. Open [plentyMarketplace](https://marketplace.plentymarkets.com/) in your browser
-2. Select the SOFORT plugin under **Payment** → **SOFORT**
+2. Select the Sofort plugin under **Payment** → **Sofort**
 3. Choose **Go to checkout** (login) and purchase
 4. Go to plentymarkets shop backend
-5. Click on the Menu Plugin **» Purchases**
+5. Click on the Menu **Plugin » Purchases**
 6. Press **Install**
 
-**Installing SOFORT-Plugin via GIT:**
+**Installing Sofort-Plugin via GIT:**
 
-1. Open the Menu Plugins **» Git**
-2.	Click on **New Plugin**. The frame **Settings** will open
-3.	Connect to your Github Account by filling in **User Name** and **Password** 
-4.	Fill the Remote URL of the SOFORT-Plugin: <https://github.com/frontend-studios/plugin-payment-sofort.git>
-5.	Select **Auto fetch**
-6.	Then click on **Save**
+1. Open the Menu **Plugins » Git**
+2. Click on **New Plugin**. The frame **Settings** will open
+3. Connect to your Github Account by filling in **User Name** and **Password** 
+4. Fill the Remote URL of the Sofort-Plugin: <https://github.com/frontend-studios/plugin-payment-sofort.git>
+5. Select **Auto fetch**
+6. Then click on **Save**
 
-## Configuring SOFORT in plentymarkets
+## Configuring Sofort in plentymarkets
 
-Before using SOFORT-Plugins, you need to connect your SOFORT-account with your plentymarkets-system.
+Before using Sofort-Plugins, you need to connect your Sofort-account with your plentymarkets-system.
 
-##### connecting to the SOFORT-account:
+##### connecting to the Sofort-account:
   
 1. Open the menu **Plugins » Plugin overview**.
-2. Click on **SOFORT** Plugin and choose **Configuration**.
+2. Click on **Sofort** Plugin and choose **Configuration**.
 3. Type in the configuration key 
 	→ You receive the configuration key after successful registration as a Merchant.
 4. Other additional configurations can be set up in the Menu **Extended Settings**.
@@ -47,7 +47,7 @@ Before using SOFORT-Plugins, you need to connect your SOFORT-account with your p
 6. Save the configurations.
 
 <table>
-  <caption>Tab. 1: SOFORT Plugin Settings / Base Settings</caption>
+  <caption>Tab. 1: Sofort Plugin Settings / Base Settings</caption>
   <thead>
     <th>
       Setting
@@ -59,7 +59,7 @@ Before using SOFORT-Plugins, you need to connect your SOFORT-account with your p
   <tbody>
     <tr>
       <td>
-        <b>Activate SOFORT</b>
+        <b>Activate Sofort</b>
       </td>
       <td><b>Default:</b> <i>No</i>
       </td>
@@ -68,14 +68,17 @@ Before using SOFORT-Plugins, you need to connect your SOFORT-account with your p
       <td>
         <b>Configuration key</b>
       </td>
-      <td><strong><i>Important:</i></strong> You'll receive the configuration key after registration (https://www.sofort.com/payment/users/register). <br />Without input the payment method won't be active.
+      <td><strong><i>Important:</i></strong> You'll receive the configuration key after registration (https://www.sofort.com/payment/users/register).
+      <br />Without input the payment method won't be active.
+      <br />Example of a correct configuration key:
+      <br />{Customer number}:{Project ID}:{API key}
       </td>
     </tr>
   </tbody>
 </table>
 
 <table>
-  <caption>Tab. 2: SOFORT Plugin Settings / Extended Settings</caption>
+  <caption>Tab. 2: Sofort Plugin Settings / Extended Settings</caption>
   <thead>
     <th>
       Setting
@@ -85,24 +88,6 @@ Before using SOFORT-Plugins, you need to connect your SOFORT-account with your p
     </th>
   </thead>
   <tbody>
-    <tr>
-      <td>
-        <b>Logo (size)</b>
-      </td>
-      <td>
-        Choose the desired display size of the logo. <strong><i><br />Important: </i></strong>The view in the frontend depends on the Template Plugin. Potentially the size of the logo isn't changed there.
-        <br /><b>Default:</b> <i>100x38</i>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>Recommended payment method</b>
-      </td>
-      <td>
-        The Payment method name will be extended with "recommended payment method".
-        <br /><b>Default:</b> <i>Yes</i>
-      </td>
-    </tr>
     <tr>
       <td>
         <b>Reason (line 1) *Mandatory</b>
@@ -131,7 +116,7 @@ Before using SOFORT-Plugins, you need to connect your SOFORT-account with your p
 </table>
 
 <table>
-  <caption>Tab. 3: SOFORT Plugin Settings / Merchant</caption>
+  <caption>Tab. 3: Sofort Plugin Settings / Merchant</caption>
   <thead>
     <th>
       Einstellung
@@ -175,18 +160,24 @@ Before using SOFORT-Plugins, you need to connect your SOFORT-account with your p
 
 In this chapter you will find out, how to offer the payment methods in your webshop.
 
-### activate SOFORT
+### activate Sofort
 
-After installing SOFORT-Plugin, you need to activate the plugin in the main configuration and at least set the configuration key. Afterwards SOFORT ist available without any further adjustments. This payment method appears depending on the priority settings next to other activated payment methods.
+After installing Sofort-Plugin, you need to activate the plugin in the main configuration and at least set the configuration key. Afterwards Sofort ist available without any further adjustments. This payment method appears depending on the priority settings next to other activated payment methods.
 
-## automatic refunds of SOFORT payments
+## automatic refunds of Sofort payments
 
-Set an event to activate automatic refunds via SOFORT.
+Set an event to activate automatic refunds via Sofort.
+
+<div class="alert alert-warning" role="alert">
+   <strong><i>Important:</i></strong> Automatic refunding is only available for merchants who have projects with Deutsche Handelsbank (DHB). 
+</div>
+
+Additional information concerning refunding can be retrieved through our [Integration Center](https://www.sofort.com/integrationCenter-eng-DE/content/view/full/3363). 
 
 ##### Set up event procedure:
 
 1. open the menu **Plugins » Plugin overview**.
-2. Click on the Plugin **SOFORT** and edit **Configuration**.
+2. Click on the Plugin **Sofort** and edit **Configuration**.
 3. type in your banking details in slide **Merchant**.
 4. open the menu **Settings » Orders » Event procedures**.
 5. Click on **Add event procedure**.
@@ -219,15 +210,15 @@ Set an event to activate automatic refunds via SOFORT.
     <tr>
       <td><strong>Filter 1</strong></td>
       <td><strong>Order > Payment method</strong></td>
-      <td><strong>Plugin: SOFORT</strong></td>
+      <td><strong>Plugin: Sofort</strong></td>
     </tr>
     <tr>
       <td><strong>Action</strong></td>
-      <td><strong>Plugin > Refund of SOFORT Payment</strong></td>
+      <td><strong>Plugin > Refund of Sofort Payment</strong></td>
       <td>&nbsp;</td>
     </tr>
   </tbody>
   <caption>
-    Tab. 4: Event procedure for automatic refunds of SOFORT payments
+    Tab. 4: Event procedure for automatic refunds of Sofort payments
   </caption>
 </table>
