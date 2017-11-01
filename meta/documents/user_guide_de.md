@@ -43,8 +43,7 @@ Bevor Sie die Funktionen des Sofort-Plugins nutzen können, müssen Sie zuerst I
 3. Geben Sie den Konfigurationsschlüssel ein.  
 	→ Diesen Schlüssel erhalten Sie durch den Registrierungsprozess.
 4. Nehmen Sie weitere Einstellungen nach Bedarf im Reiter **Erweiterte Einstellungen** vor.
-5. Sofern Sie eine automatisierte Rückzahlung (s.u.) einrichten möchten, tragen Sie im Reiter **Händlereinstellungen** Ihre Bankverbindung ein.
-6. Speichern Sie die Einstellungen ab.
+5. Speichern Sie die Einstellungen ab.
 
 <table>
   <caption>Tab. 1: Sofort-Plugineinstellungen / Grundeinstellungen</caption>
@@ -164,62 +163,3 @@ In diesem Abschnitt erfahren Sie, wie Sie die Zahlungsart in Ihrem Webshop anbie
 
 Nachdem Sie das Sofort-Plugin installiert haben, müssen Sie in der Konfiguration in der Grundeinstellung das Plugin aktivieren und mindestens den Konfigurationsschlüssel setzen.
 Danach ist Sofort. ohne weitere Einstellungen als Zahlungsart verfügbar. Diese Zahlungsart erscheint in der Kaufabwicklung je nach Priorität neben den anderen aktivierten Zahlungsarten.
-
-## Sofort-Zahlung automatisch zurückzahlen
-
-Richten Sie eine Ereignisaktion ein, um die Rückzahlung einer Zahlung über Sofort. zu automatisieren.
-
-<div class="alert alert-warning" role="alert">
-   <strong><i>Wichtig:</i></strong> Automatische Rückzahlungen stehen nur Händlern mit einem Konto bei der Deutschen Handelsbank (DHB) zur Verfügung. 
-</div>
-
-Weitere Informationen zu Rückbuchungen stehen Ihnen über das [Integration Center](https://www.sofort.com/integrationCenter-eng-DE/content/view/full/3363) zur Verfügung. 
-
-##### Ereignisaktion einrichten:
-
-1. Öffnen Sie das Menü **Plugins » Übersicht**.
-2. Klicken Sie auf das Plugin **Sofort** und wählen dann **Konfiguration**.
-3. Tragen Sie im Reiter **Händlereinstellungen** Ihre Bankverbindung ein.
-4. Öffnen Sie das Menü **Einstellungen » Aufträge » Ereignisaktionen**.
-5. Klicken Sie auf **Ereignisaktion hinzufügen**.
-→ Das Fenster **Neue Ereignisaktion erstellen** wird geöffnet.
-6. Geben Sie einen Namen ein.
-7. Wählen Sie das Ereignis gemäß Tabelle 4.
-8. **Speichern** Sie die Einstellungen.
-9. Nehmen Sie die Einstellungen gemäß Tabelle 4 vor.
-10. Setzen Sie ein Häkchen bei **Aktiv**.
-11. **Speichern** Sie die Einstellungen.
-
-<table>
-  <thead>
-    <th>
-      Einstellung
-    </th>
-    <th>
-      Option
-    </th>
-    <th>
-      Auswahl
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Ereignis</strong></td>
-      <td><strong>Das Ereignis wählen, nach dem eine Rückzahlung erfolgen soll.</strong></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><strong>Filter 1</strong></td>
-      <td><strong>Auftrag > Zahlungsart</strong></td>
-      <td><strong>Plugin: Sofort</strong></td>
-    </tr>
-    <tr>
-      <td><strong>Aktion</strong></td>
-      <td><strong>Plugin > Rückerstattung der Sofort-Zahlung</strong></td>
-      <td>&nbsp;</td>
-    </tr>
-  </tbody>
-  <caption>
-    Tab. 4: Ereignisaktion zur automatischen Rückzahlung der Sofort-Zahlung
-  </caption>
-</table>

@@ -17,6 +17,7 @@ use Sofort\Services\PaymentService;
  * Class RefundEventProcedure
  * 
  * @package Sofort\Procedures
+ * @deprecated v1.0.2
  */
 class RefundEventProcedure
 {
