@@ -114,47 +114,6 @@ Before using Sofort-Plugins, you need to connect your Sofort-account with your p
   </tbody>
 </table>
 
-<table>
-  <caption>Tab. 3: Sofort Plugin Settings / Merchant</caption>
-  <thead>
-    <th>
-      Einstellung
-    </th>
-    <th>
-      Erläuterung
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <b>Recipient holder</b>
-      </td>
-      <td>
-        Merchant depositor
-        <br /><b>Default:</b> -
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>IBAN</b>
-      </td>
-      <td>
-        Merchant IBAN	
-        <br /><b>Default:</b> -
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>BIC</b>
-      </td>
-      <td>
-        Merchant BIC
-        <br /><b>Default:</b> -
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## administrate payment methods
 
 In this chapter you will find out, how to offer the payment methods in your webshop.

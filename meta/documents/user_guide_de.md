@@ -114,47 +114,6 @@ Bevor Sie die Funktionen des Sofort-Plugins nutzen können, müssen Sie zuerst I
   </tbody>
 </table>
 
-<table>
-  <caption>Tab. 3: Sofort-Plugineinstellungen / Händlereinstellungen</caption>
-  <thead>
-    <th>
-      Einstellung
-    </th>
-    <th>
-      Erläuterung
-    </th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <b>Kontoinhaber</b>
-      </td>
-      <td>
-        Händler Kontoinhaber
-        <br /><b>Standard:</b> -
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>IBAN</b>
-      </td>
-      <td>
-        Händler IBAN	
-        <br /><b>Standard:</b> -
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <b>BIC</b>
-      </td>
-      <td>
-        Händler BIC
-        <br /><b>Standard:</b> -
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Zahlungsarten verwalten
 
 In diesem Abschnitt erfahren Sie, wie Sie die Zahlungsart in Ihrem Webshop anbieten.

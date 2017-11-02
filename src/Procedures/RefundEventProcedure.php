@@ -94,9 +94,9 @@ class RefundEventProcedure
 			if ($payment->mopId == $paymentHelper->getSofortMopId()) {
 
 				$refundProperties['transactionId'] = $paymentHelper->getPaymentPropertyValue($payment, PaymentProperty::TYPE_TRANSACTION_ID);
-				$refundProperties['holder'] = $configRepo->get('SOFORT.recipientHolder');
-				$refundProperties['iban'] = $configRepo->get('SOFORT.recipientIBAN');
-				$refundProperties['bic'] = $configRepo->get('SOFORT.recipientBIC');
+				$refundProperties['holder'] = $configRepo->get('SOFORT.recipientHolder', '');
+				$refundProperties['iban'] = $configRepo->get('SOFORT.recipientIBAN', '');
+				$refundProperties['bic'] = $configRepo->get('SOFORT.recipientBIC', '');
 				$refundProperties['amount'] = $orderAmount->invoiceTotal;
 				$refundProperties['currency'] = $orderAmount->currency;
 				$this->getLogger(__METHOD__)->debug('SOFORT::Events.refundEventProperties', ['refundProperties' => $refundProperties]);
