@@ -1,16 +1,16 @@
 <div class="alert alert-warning" role="alert">
-   <strong><i>Note:</i></strong> The Sofort plugin has been developed for use with the online store Ceres and only works with its structure or other template plugins. 
+   <strong><i>Note:</i></strong> The sofort-Plugin has been developed for use with the online store Ceres and only works with its structure or other template plugins. 
 </div>
 
-# Sofort - Easy Online payments for plentymarkets Online-Shops
+# Online Bank Transfer - Easy Online payments for plentymarkets Online-Shops
 
-With Sofort for plentymarkets you can add **Sofort** as a payment method to your online shop.
+"Onine Bank Transfer." formerly known as SOFORT is the direct payment system provided by Sofort GmbH - A Klarna Group Company. It allows you to make a wire transfer of the respective amount during the order process using your online banking account - easy, quick and secure – without registration. The online shop can process and deliver your order faster thanks to our real-time transaction notification.
 
-## Creating a Sofort account
+## Creating a Sofort - Merchant account
 
 You need to register at our [Merchant Portal](https://www.sofort.com/payment/users/register) before you are able to use Sofort as a payment method. After registration you will receive the correct information and credentials needed to install and configure the payment method. 
 
-## Installing Sofort in plentymarkets
+## Installing the Sofort- Plugin in plentymarkets
 
 Before using Sofort-Plugin, you need to install the module from the Git or plentyMarketplace.
 
@@ -118,6 +118,6 @@ Before using Sofort-Plugins, you need to connect your Sofort-account with your p
 
 In this chapter you will find out, how to offer the payment methods in your webshop.
 
-### activate Sofort
+### activate Sofort-Plugin
 
 After installing Sofort-Plugin, you need to activate the plugin in the main configuration and at least set the configuration key. Afterwards Sofort ist available without any further adjustments. This payment method appears depending on the priority settings next to other activated payment methods.
