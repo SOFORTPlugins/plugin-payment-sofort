@@ -4,7 +4,7 @@
 
 # Sofort. – Bargeldloses Bezahlen in plentymarkets Online-Shops
 
-Mit diesem Plugin binden Sie das Direkt-Überweisungsverfahren **Sofort.** in Ihren Webshop ein.
+"Sofort" ist das Direkt-Überweisungsverfahren der Sofort GmbH - A Klarna Group Company. Mit dem TÜV Saarland zertifizierten Bezahlsystem zahlst du sicher und bequem mit deinen gewohnten Online Banking Daten (PIN/TAN) ohne Registrierung - ab sofort im neuen Klarna Design. Der Händler erhält nach Abschluss der Überweisung eine Echtzeitbestätigung. So kann er Lagerware und digitale Güter sofort versenden - Du erhältst so Deine Einkäufe schneller.
 
 ## Sofort-Konto eröffnen
 
